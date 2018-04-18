@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const UserDB = require("../../mongodb/dbclient/User");
+const DepartmantDb = require("../../mongodb/dbclient/Departmant");
 /* GET home page. */
 router.get("/", function(req, res, next) {
   res.render("user/menu");
@@ -11,23 +12,25 @@ router.get("/edit", function(req, res, next) {
 });
 
 router.get("/add", (req, res, next) => {
-  res.render("user/add");
+  cb=data=>(    res.render("user/add",{data}))
+  DepartmantDb.findDepartmant(cb);
 });
 
 router.post("/add", (req, res, next) => {
   cb = () => {
+    console.log(req.body)
+
     res.redirect("/user/edit/all");
   };
   UserDB.addUser(req.body, cb);
 });
 
-router.get("/edit/all", (req, res, next) => {
-  cb = data => {
-    console.log(data);
-    res.render("user/list", { data });
-  };
-  UserDB.findUser(cb);
-});
+  router.get("/edit/all", (req, res, next) => {
+    cb = data => {
+       res.render("user/list", { data });
+    };
+    UserDB.findUser(cb);
+  });
 router.get("/edit/all/:singleUser", (req, res, next) => {
   const { singleUser } = req.params;
   cb = data => res.render("user/single", { data });
