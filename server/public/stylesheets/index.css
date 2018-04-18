@@ -1,0 +1,16 @@
+div.index-page{
+    border:solid 1px rgb(203, 214, 229);
+    padding: 100px;
+ 
+    
+}
+
+
+@media only screen and (min-width: 992px) {
+
+    div.index-page{
+        width:80%;
+        margin:auto;
+        margin-top:20px
+    }
+}
