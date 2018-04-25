@@ -1,1 +1,3 @@
 # GenerateEmailCollege
+McLintSoft web app 
+

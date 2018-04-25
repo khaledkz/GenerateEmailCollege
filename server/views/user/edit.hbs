@@ -1,21 +1,69 @@
-<form method="post">
-    <div class="form-group has-success">
+<form class="m-3" method="post">
 
-        <label for="example-text-input text-success" class="col-12 col-form-label ">
-            <h3 class="text-danger ml-4">Edit User</h3>
-        </label>
 
-        <label for="example-text-input text-success " class="col-12 col-form-label">
-            <h4 class="text-primary pl-2">Username:</h4>
-        </label>
+    <label for="example-text-input text-success" class="col-12 col-form-label ">
+        <h3 class="text-danger ml-4">Generate New Email</h3>
+    </label>
 
-        <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
-            <input placeholder="item title" class="form-control" type="text" name="username" id="example-text-input" value="{{data.username}}">
-        </div>
+    <label for="example-text-input text-success " class="col-12 col-form-label">
+        <h4 class="text-primary pl-2">Firstname:</h4>
+    </label>
 
-        <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 mt-3 ">
-            <input class="btn btn-success btn-lg" type="submit" value="Submit">
-        </div>
-
+    <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
+        <input id="firstName" value="{{data.firstname}}"  required="true" placeholder="Enter your first name" class="form-control" type="text" name="firstname">
     </div>
+
+    <label class="col-12 col-form-label">
+        <h4 class="text-primary pl-2">surname:</h4>
+    </label>
+
+    <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
+        <input id="lastName" value="{{data.lastname}}" required="true" placeholder="Enter your last name" class="form-control" type="text" name="lastname">
+    </div>
+ 
+ 
+
+    <label for="example-text-input text-success " class="col-12 col-form-label">
+        <h4 class="text-primary pl-2">Your Current Email:</h4>
+    </label>
+
+    <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
+        <input placeholder="Enter your Email" class="form-control" type="text" name="emailAddress" />
+    </div>
+
+    <label for="example-text-input text-success " class="col-12 col-form-label">
+        <h4 class="text-primary pl-2">Username:</h4>
+    </label>
+
+    <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
+        <input required="true" placeholder="Enter your username" class="form-control" type="text" name="username">
+    </div>
+ 
+
+    <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
+        <input required="true" placeholder="Enter your username" class="form-control" type="date" name="dateBirth">
+    </div>
+
+ 
+
+    <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
+        <input required="true" placeholder="Confirm Your password" class="form-control" type="password" name="confirmPassowrd">
+    </div>
+
+    <label for="example-text-input text-success " class="col-12 col-form-label">
+        <h4 class="text-primary pl-2">Phone Number:</h4>
+    </label>
+
+    <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 ">
+        <input required="true" placeholder="Enter your phone number" class="form-control" type="phoneNumber" name="confirmPassowrd">
+    </div>
+
+ 
+
+    <div class="col-lg-6 col-md-8 col-sm-9 col-xs-9 mt-4 ">
+        <input class="btn btn-success btn-lg" type="submit" value="Submit">
+    </div>
+
 </form>
+
+ 
